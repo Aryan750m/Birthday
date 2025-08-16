@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            font-family: sans-serif;
+            color: #fefefe;
+            background: #000; /* Optional: dark background for better effect */
+        }
+
+        .container {
+            position: relative;
+            width: 320px;
+            margin: 100px auto 0 auto;
+            perspective: 1000px;
+        }
+
+        .carousel {
+            position: absolute;
+            width: 100%;
+            transform-style: preserve-3d;
+            animation: rotate360 60s infinite forwards linear;
+        }
+
+        .image {
+            position: absolute;
+            width: 300px;
+            height: 187px;
+            background-size: cover;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+            display: flex;
+        }
+
+        .image:nth-child(1) { transform: rotateY(0deg) translateZ(430px); }
+        .image:nth-child(2) { transform: rotateY(40deg) translateZ(430px); }
+        .image:nth-child(3) { transform: rotateY(80deg) translateZ(430px); }
+        .image:nth-child(4) { transform: rotateY(120deg) translateZ(430px); }
+        .image:nth-child(5) { transform: rotateY(160deg) translateZ(430px); }
+        .image:nth-child(6) { transform: rotateY(200deg) translateZ(430px); }
+        .image:nth-child(7) { transform: rotateY(240deg) translateZ(430px); }
+        .image:nth-child(8) { transform: rotateY(280deg) translateZ(430px); }
+        .image:nth-child(9) { transform: rotateY(320deg) translateZ(430px); }
+
+        @keyframes rotate360 {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(-360deg); }
+        }
+
+        /* Quote styling */
+        .quote {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: #ffeb3b;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-family: cursive;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="carousel">
+            <div class="image"><img src="1.jpg" width="100%"></div>
+            <div class="image"><img src="2.jpg" width="100%"></div>
+            <div class="image"><img src="3.jpg" width="100%"></div>
+            <div class="image"><img src="10.jpg" width="100%"></div>
+            <div class="image"><img src="5.jpg" width="100%"></div>
+            <div class="image"><img src="6.jpg" width="100%"></div>
+            <div class="image"><img src="7.jpg" width="100%"></div>
+            <div class="image"><img src="8.jpg" width="100%"></div>
+            <div class="image"><img src="9.jpg" width="100%"></div>
+        </div>
+    </div>
+
+    <!-- Birthday Quote -->
+    <div class="quote">
+        🎉 "May your day be filled with love, laughter, and unforgettable memories!" Happy birthday once again🎂
+    </div>
+</body>
+</html>
